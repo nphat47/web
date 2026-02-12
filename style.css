@@ -182,6 +182,30 @@ header {
     }
 }
 
+/* Page Header (Glassmorphism) */
+.page-header {
+    text-align: center;
+    padding: 3rem 10%;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30px;
+    margin: 2rem 5%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+.page-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--dark-text);
+}
+
 /* Units Grid */
 .units-container {
     padding: 5% 10%;
@@ -212,6 +236,12 @@ header {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
     cursor: pointer;
+    text-decoration: none;
+    /* Remove underline */
+    color: var(--dark-text);
+    /* Ensure text is not default link blue */
+    display: block;
+    /* Ensure it behaves like a block for padding/margin */
 }
 
 .unit-card:hover {
@@ -220,10 +250,25 @@ header {
     box-shadow: 0 15px 40px rgba(78, 205, 196, 0.2);
 }
 
+.unit-card h3 {
+    text-decoration: none;
+    /* Double check to remove underline */
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.unit-card p {
+    color: var(--dark-text);
+}
+
+/* Use .unit-icon as used in HTML, or map .card-icon if user changes HTML */
+.unit-icon,
 .card-icon {
-    font-size: 3rem;
+    font-size: 5rem;
+    /* Increased size */
     color: var(--secondary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .unit-card h4 {
@@ -669,90 +714,4 @@ footer {
         transform: scale(1.2);
         box-shadow: 0 0 15px #fff, 0 0 25px var(--secondary-color);
     }
-}
-
-/* Accordion Styles */
-.unit-accordion-item {
-    margin-bottom: 1.5rem;
-    border-radius: 15px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    transition: all 0.3s ease;
-}
-
-.unit-accordion-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.unit-accordion-header {
-    padding: 1.5rem 2rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-    transition: background-color 0.3s ease;
-}
-
-.unit-accordion-header:hover {
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.unit-accordion-header h4 {
-    margin: 0;
-    font-size: 1.3rem;
-    color: var(--dark-text);
-}
-
-.unit-accordion-header .header-icon {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin-right: 1rem;
-    vertical-align: middle;
-}
-
-.unit-accordion-header .toggle-icon {
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    transition: transform 0.3s ease;
-}
-
-.unit-accordion-item.active .unit-accordion-header .toggle-icon {
-    transform: rotate(180deg);
-}
-
-.unit-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-    background: rgba(255, 255, 255, 0.4);
-}
-
-.unit-accordion-content-inner {
-    padding: 2rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-/* Adjust embedded content styles */
-.unit-accordion-content .unit-header {
-    background: transparent;
-    box-shadow: none;
-    padding: 0;
-    margin-bottom: 2rem;
-    border: none;
-    text-align: left;
-}
-
-.unit-accordion-content .unit-header h2 {
-    font-size: 2rem;
-}
-
-.unit-accordion-content .unit-navigation {
-    display: none;
-    /* Hide navigation buttons in accordion view */
 }
