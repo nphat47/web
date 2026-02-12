@@ -100,71 +100,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
+
     createBackgroundDecorations();
-    // Background Decoration: Floating Shapes & Neon Stars
-    function createBackgroundDecorations() {
-        // Only run if not already created
-        if (document.querySelector('.bg-decorations-container')) return;
 
-        const body = document.body;
-        const bgContainer = document.createElement('div');
-        bgContainer.className = 'bg-decorations-container';
-        // Ensure it's behind everything
-        bgContainer.style.position = 'fixed';
-        bgContainer.style.top = '0';
-        bgContainer.style.left = '0';
-        bgContainer.style.width = '100%';
-        bgContainer.style.height = '100%';
-        bgContainer.style.zIndex = '-1';
-        bgContainer.style.overflow = 'hidden';
-        bgContainer.style.pointerEvents = 'none';
-        body.prepend(bgContainer);
+    // Accordion Toggle Function
+    window.toggleUnit = function (unitId) {
+        const content = document.getElementById(unitId);
+        const item = content.parentElement;
+        const icon = item.querySelector('.toggle-icon');
 
-        // 1. Large Floating Geometric Shapes (3D CSS)
-        const shapes = [
-            { type: 'cube', top: '10%', left: '5%', size: '100px', animation: 'float 8s ease-in-out infinite' },
-            { type: 'sphere', top: '20%', right: '5%', size: '120px', animation: 'float 12s ease-in-out infinite reverse' },
-            { type: 'cube', bottom: '15%', left: '8%', size: '80px', animation: 'float 10s ease-in-out infinite 2s' },
-            { type: 'sphere', bottom: '10%', right: '8%', size: '150px', animation: 'float 15s ease-in-out infinite 1s' }
-        ];
+        // Toggle current item
+        if (item.classList.contains('active')) {
+            item.classList.remove('active');
+            content.style.maxHeight = null;
+        } else {
+            // Optional: Close other items
+            /*
+            document.querySelectorAll('.unit-accordion-item').forEach(otherItem => {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.unit-accordion-content').style.maxHeight = null;
+            });
+            */
 
-        shapes.forEach(shape => {
-            const el = document.createElement('div');
-            el.className = `bg-shape ${shape.type}`;
-            el.style.top = shape.top || 'auto';
-            el.style.left = shape.left || 'auto';
-            el.style.right = shape.right || 'auto';
-            el.style.bottom = shape.bottom || 'auto';
-            el.style.width = shape.size;
-            el.style.height = shape.size;
-            el.style.setProperty('--float-duration', shape.animation.split(' ')[1]);
-            bgContainer.appendChild(el);
-        });
-
-        // 2. Small Neon Stars (Scattered around edges)
-        const starCount = 40;
-        for (let i = 0; i < starCount; i++) {
-            const star = document.createElement('div');
-            star.className = 'bg-star';
-
-            // Random position but avoid center 60%
-            let x, y;
-            if (Math.random() > 0.5) {
-                // Left or Right edge
-                x = Math.random() > 0.5 ? Math.random() * 15 : 85 + Math.random() * 15;
-                y = Math.random() * 100;
-            } else {
-                // Top or Bottom edge
-                x = Math.random() * 100;
-                y = Math.random() > 0.5 ? Math.random() * 15 : 85 + Math.random() * 15;
-            }
-
-            star.style.left = `${x}%`;
-            star.style.top = `${y}%`;
-            star.style.animationDelay = `${Math.random() * 5}s`;
-            bgContainer.appendChild(star);
+            item.classList.add('active');
+            content.style.maxHeight = content.scrollHeight + "px";
         }
-    }
-
-    createBackgroundDecorations();
+    };
 });

@@ -34,56 +34,437 @@
 
     <section id="units" class="units-container">
         <h3>บทเรียนทั้งหมด</h3>
-        <div class="units-grid">
+        <div class="units-accordion">
             <!-- Unit 1 -->
-            <div class="unit-card" onclick="location.href='content/unit1.html'">
-                <div class="card-icon"><i class="fas fa-microchip"></i></div>
-                <h4>บทที่ 1</h4>
-                <p>เทคโนโลยีรอบตัว</p>
-                <span class="read-more">เข้าสู่บทเรียน <i class="fas fa-chevron-right"></i></span>
+            <div class="unit-accordion-item">
+                <div class="unit-accordion-header" onclick="toggleUnit('unit1')">
+                    <h4><i class="fas fa-microchip header-icon"></i> บทที่ 1: เทคโนโลยีรอบตัว</h4>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div id="unit1" class="unit-accordion-content">
+                    <div class="unit-accordion-content-inner">
+                        <!-- Content from unit1.html -->
+                        <div class="unit-header">
+                            <h2>บทที่ 1: เทคโนโลยีรอบตัว</h2>
+                            <p>ความหมาย ประโยชน์ และความสำคัญของเทคโนโลยี</p>
+                        </div>
+                        <div class="video-container" style="text-align: center; margin-bottom: 2rem;">
+                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/C6TqM3R51zY"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                                style="max-width: 800px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"></iframe>
+                        </div>
+                        <div class="content-block">
+                            <h3>1.1 ความหมายของเทคโนโลยี</h3>
+                            <p>เทคโนโลยี (Technology) หมายถึง สิ่งที่มนุษย์สร้างหรือพัฒนาขึ้น ซึ่งอาจเป็นได้ทั้งชิ้นงาน
+                                (Product)
+                                หรือวิธีการ (Process) เพื่อใช้แก้ปัญหา สนองความต้องการ
+                                หรือเพิ่มความสามารถในการทำงานของมนุษย์</p>
+                            <div class="example-box">
+                                <h4>ตัวอย่างเทคโนโลยีในชีวิตประจำวัน</h4>
+                                <ul>
+                                    <li><strong>ด้านการสื่อสาร:</strong> สมาร์ทโฟน อินเทอร์เน็ต</li>
+                                    <li><strong>ด้านการเดินทาง:</strong> รถยนต์ รถไฟฟ้า</li>
+                                    <li><strong>ด้านการแพทย์:</strong> เครื่องเอ็กซเรย์ วัคซีน</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content-block">
+                            <h3>1.2 ประโยชน์ของเทคโนโลยี</h3>
+                            <p>เทคโนโลยีช่วยให้ชีวิตมนุษย์สะดวกสบายขึ้น แก้ไขปัญหาที่ซับซ้อน
+                                และช่วยพัฒนาเศรษฐกิจและสังคม</p>
+                            <ul>
+                                <li>ช่วยแก้ปัญหาหรือสนองความต้องการของมนุษย์</li>
+                                <li>ช่วยเพิ่มความสามารถในการทำงานของมนุษย์</li>
+                            </ul>
+                        </div>
+                        <div class="content-block">
+                            <h3>1.3 เทคโนโลยีในงานอาชีพ</h3>
+                            <p>ในปัจจุบันทุกอาชีพมีการนำเทคโนโลยีมาใช้เพื่อเพิ่มประสิทธิภาพการทำงาน เช่น</p>
+                            <ul>
+                                <li><strong>เกษตรกร:</strong> ใช้โดรนพ่นปุ๋ย, ระบบรดน้ำอัตโนมัติ</li>
+                                <li><strong>แพทย์:</strong> ใช้หุ่นยนต์ช่วยผ่าตัด, AI วินิจฉัยโรค</li>
+                                <li><strong>พ่อค้าแม่ค้าออนไลน์:</strong> ใช้แอปพลิเคชันจัดการสต็อกและขนส่ง</li>
+                            </ul>
+                        </div>
+                        <div class="content-block">
+                            <h3>สื่อการเรียนรู้</h3>
+                            <div class="media-container" style="text-align: center; margin: 2rem 0;">
+                                <img src="1.png" alt="ภาพประกอบบทที่ 1"
+                                    style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                            </div>
+                            <div class="worksheet-download" style="text-align: center; margin-top: 2rem;">
+                                <a href="ใบงานที่ 1.pdf" target="_blank" class="btn-primary"><i
+                                        class="fas fa-file-pdf"></i>
+                                    ดาวน์โหลดใบงานที่ 1</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <!-- Unit 2 -->
-            <div class="unit-card" onclick="location.href='content/unit2.html'">
-                <div class="card-icon"><i class="fas fa-sync-alt"></i></div>
-                <h4>บทที่ 2</h4>
-                <p>การเปลี่ยนแปลงของเทคโนโลยี</p>
-                <span class="read-more">เข้าสู่บทเรียน <i class="fas fa-chevron-right"></i></span>
+            <div class="unit-accordion-item">
+                <div class="unit-accordion-header" onclick="toggleUnit('unit2')">
+                    <h4><i class="fas fa-sync-alt header-icon"></i> บทที่ 2: การเปลี่ยนแปลงของเทคโนโลยี</h4>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div id="unit2" class="unit-accordion-content">
+                    <div class="unit-accordion-content-inner">
+                        <!-- Content from unit2.html -->
+                        <div class="unit-header">
+                            <h2>บทที่ 2: การเปลี่ยนแปลงของเทคโนโลยี</h2>
+                            <p>สาเหตุและปัจจัยที่ทำให้เทคโนโลยีเปลี่ยนแปลงไป</p>
+                        </div>
+                        <div class="video-container" style="text-align: center; margin-bottom: 2rem;">
+                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/CMjl67kmeKk"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                                style="max-width: 800px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"></iframe>
+                        </div>
+                        <div class="content-block">
+                            <h3>2.1 สาเหตุการเปลี่ยนแปลงของเทคโนโลยี</h3>
+                            <p>เทคโนโลยีมีการเปลี่ยนแปลงตลอดเวลาเนื่องจากปัจจัยหลายอย่าง:</p>
+                            <ul>
+                                <li><strong>ความต้องการของมนุษย์:</strong> เราต้องการความสะดวกสบาย ความรวดเร็ว
+                                    และความปลอดภัยที่มากขึ้น
+                                </li>
+                                <li><strong>ความก้าวหน้าของศาสตร์ต่างๆ:</strong> โดยเฉพาะวิทยาศาสตร์และคณิตศาสตร์
+                                    ทำให้เกิดองค์ความรู้ใหม่ๆ ที่นำมาสร้างเทคโนโลยีใหม่</li>
+                                <li><strong>สภาพเศรษฐกิจและสังคม:</strong> การแข่งขันทางธุรกิจ กฎหมาย และวัฒนธรรม</li>
+                                <li><strong>สิ่งแวดล้อม:</strong> ภาวะโลกร้อน ภัยธรรมชาติ กระตุ้นให้เกิดเทคโนโลยีรักโลก
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-block">
+                            <h3>2.2 การวิเคราะห์การเปลี่ยนแปลง</h3>
+                            <p>เราสามารถดูตัวอย่างการเปลี่ยนแปลงได้ชัดเจนจากสิ่งใกล้ตัว เช่น:</p>
+                            <div class="example-box">
+                                <h4>วิวัฒนาการของการซักผ้า</h4>
+                                <ol>
+                                    <li>การใช้มือขยี้และไม้ทุบ (อดีต)</li>
+                                    <li>กระดานซักผ้า</li>
+                                    <li>เครื่องซักผ้าแบบมือกวน</li>
+                                    <li>เครื่องซักผ้าถังเดี่ยว/ถังคู่</li>
+                                    <li>เครื่องซักผ้าฝาหน้าพร้อมระบบอบแห้งและสั่งงานผ่านมือถือ (ปัจจุบัน)</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="content-block">
+                            <h3>สื่อการเรียนรู้</h3>
+                            <div class="media-container" style="text-align: center; margin: 2rem 0;">
+                                <img src="2.png" alt="ภาพประกอบบทที่ 2"
+                                    style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                            </div>
+                            <div class="worksheet-download" style="text-align: center; margin-top: 2rem;">
+                                <a href="ใบงานที่ 2.pdf" target="_blank" class="btn-primary"><i
+                                        class="fas fa-file-pdf"></i>
+                                    ดาวน์โหลดใบงานที่ 2</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <!-- Unit 3 -->
-            <div class="unit-card" onclick="location.href='content/unit3.html'">
-                <div class="card-icon"><i class="fas fa-cogs"></i></div>
-                <h4>บทที่ 3</h4>
-                <p>ระบบทางเทคโนโลยี</p>
-                <span class="read-more">เข้าสู่บทเรียน <i class="fas fa-chevron-right"></i></span>
+            <div class="unit-accordion-item">
+                <div class="unit-accordion-header" onclick="toggleUnit('unit3')">
+                    <h4><i class="fas fa-cogs header-icon"></i> บทที่ 3: ระบบทางเทคโนโลยี</h4>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div id="unit3" class="unit-accordion-content">
+                    <div class="unit-accordion-content-inner">
+                        <!-- Content from unit3.html -->
+                        <div class="unit-header">
+                            <h2>บทที่ 3: ระบบทางเทคโนโลยี</h2>
+                            <p>Input -> Process -> Output และ Feedback</p>
+                        </div>
+                        <div class="video-container" style="text-align: center; margin-bottom: 2rem;">
+                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/izQX6GsxpjE"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                                style="max-width: 800px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"></iframe>
+                        </div>
+                        <div class="content-block">
+                            <h3>3.1 องค์ประกอบของระบบทางเทคโนโลยี</h3>
+                            <p>ระบบทางเทคโนโลยีประกอบด้วย 4 ส่วนหลัก:</p>
+                            <div class="example-box">
+                                <ul>
+                                    <li><strong>ตัวป้อน (Input):</strong> สิ่งที่ใส่เข้าสู่ระบบเพื่อให้ระบบทำงาน เช่น
+                                        พลังงานไฟฟ้า, น้ำ,
+                                        ข้อมูล</li>
+                                    <li><strong>กระบวนการ (Process):</strong>
+                                        การทำงานของระบบเพื่อเปลี่ยนตัวป้อนให้เป็นผลผลิต</li>
+                                    <li><strong>ผลผลิต (Output):</strong> สิ่งที่ได้จากการทำงานของระบบ</li>
+                                    <li><strong>ข้อมูลย้อนกลับ (Feedback):</strong> (อาจมีหรือไม่มีก็ได้)
+                                        ข้อมูลที่ส่งกลับเพื่อควบคุมการทำงานของระบบให้ดีขึ้น</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content-block">
+                            <h3>3.2 ตัวอย่างระบบทางเทคโนโลยี: หม้อหุงข้าวไฟฟ้า</h3>
+                            <ul>
+                                <li><strong>Input:</strong> ไฟฟ้า, ข้าว, น้ำ</li>
+                                <li><strong>Process:</strong>
+                                    การเปลี่ยนพลังงานไฟฟ้าเป็นความร้อนเพื่อทำให้น้ำเดือดและข้าวสุก</li>
+                                <li><strong>Output:</strong> ข้าวสวยที่สุกพร้อมรับประทาน</li>
+                                <li><strong>Feedback:</strong> ระบบตัดไฟอัตโนมัติเมื่อน้ำแห้งหรือข้าวสุกแล้ว
+                                    (ในรุ่นที่มีระบบนี้)</li>
+                            </ul>
+                        </div>
+                        <div class="content-block">
+                            <h3>สื่อการเรียนรู้</h3>
+                            <div class="media-container" style="text-align: center; margin: 2rem 0;">
+                                <img src="3.png" alt="ภาพประกอบบทที่ 3"
+                                    style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                            </div>
+                            <div class="worksheet-download" style="text-align: center; margin-top: 2rem;">
+                                <a href="ใบงานที่ 3.pdf" target="_blank" class="btn-primary"><i
+                                        class="fas fa-file-pdf"></i>
+                                    ดาวน์โหลดใบงานที่ 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <!-- Unit 4 -->
-            <div class="unit-card" onclick="location.href='content/unit4.html'">
-                <div class="card-icon"><i class="fas fa-tools"></i></div>
-                <h4>บทที่ 4</h4>
-                <p>วัสดุและเครื่องมือช่าง</p>
-                <span class="read-more">เข้าสู่บทเรียน <i class="fas fa-chevron-right"></i></span>
+            <div class="unit-accordion-item">
+                <div class="unit-accordion-header" onclick="toggleUnit('unit4')">
+                    <h4><i class="fas fa-tools header-icon"></i> บทที่ 4: วัสดุและเครื่องมือช่างพื้นฐาน</h4>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div id="unit4" class="unit-accordion-content">
+                    <div class="unit-accordion-content-inner">
+                        <!-- Content from unit4.html -->
+                        <div class="unit-header">
+                            <h2>บทที่ 4: วัสดุและเครื่องมือช่างพื้นฐาน</h2>
+                            <p>รู้จักวัสดุต่างๆ และวิธีการใช้เครื่องมืออย่างปลอดภัย</p>
+                        </div>
+                        <div class="video-container" style="text-align: center; margin-bottom: 2rem;">
+                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/BASv4VPJklY"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                                style="max-width: 800px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"></iframe>
+                        </div>
+                        <div class="content-block">
+                            <h3>4.1 วัสดุน่ารู้</h3>
+                            <p>วัสดุที่ใช้ในการสร้างชิ้นงานมีหลายประเภท แต่ละประเภทมีสมบัติที่แตกต่างกัน:</p>
+                            <div class="example-box">
+                                <ul>
+                                    <li><strong>ไม้ (Wood):</strong> มีความแข็งแรง สวยงาม แต่อาจผุพังได้หากโดนความชื้น
+                                    </li>
+                                    <li><strong>โลหะ (Metals):</strong> แข็งแกร่ง ทนทาน นำไฟฟ้าและความร้อนได้ดี (เช่น
+                                        เหล็ก,
+                                        อะลูมิเนียม)</li>
+                                    <li><strong>พลาสติก (Plastics):</strong> น้ำหนักเบา ขึ้นรูปง่าย ไม่นำไฟฟ้า (เช่น
+                                        เทอร์โมพลาสติก,
+                                        เทอร์โมเซต)</li>
+                                    <li><strong>ยาง (Rubber):</strong> ยืดหยุ่น กันน้ำ เป็นฉนวนไฟฟ้า</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content-block">
+                            <h3>4.2 เครื่องมือช่างพื้นฐาน</h3>
+                            <p>การเลือกใช้เครื่องมือให้เหมาะสมกับงานและวัสดุมีความสำคัญมาก:</p>
+                            <ul>
+                                <li><strong>เครื่องมือวัด:</strong> ตลับเมตร, ไม้บรรทัดเหล็ก</li>
+                                <li><strong>เครื่องมือตัด:</strong> เลื่อยลันดา (ตัดไม้), คัตเตอร์ (ตัดกระดาษ/พลาสติก),
+                                    คีมตัด</li>
+                                <li><strong>เครื่องมือยึดติด:</strong> กาวลาเท็กซ์ (ไม้), กาวร้อน, ปืนกาว</li>
+                                <li><strong>เครื่องมือเจาะ:</strong> สว่านมือ, สว่านไฟฟ้า</li>
+                            </ul>
+                        </div>
+                        <div class="content-block">
+                            <h3>สื่อการเรียนรู้</h3>
+                            <div class="media-container" style="text-align: center; margin: 2rem 0;">
+                                <img src="4.png" alt="ภาพประกอบบทที่ 4"
+                                    style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                            </div>
+                            <div class="worksheet-download" style="text-align: center; margin-top: 2rem;">
+                                <a href="ใบงานที่ 4.pdf" target="_blank" class="btn-primary"><i
+                                        class="fas fa-file-pdf"></i>
+                                    ดาวน์โหลดใบงานที่ 4</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <!-- Unit 5 -->
-            <div class="unit-card" onclick="location.href='content/unit5.html'">
-                <div class="card-icon"><i class="fas fa-bolt"></i></div>
-                <h4>บทที่ 5</h4>
-                <p>กลไก ไฟฟ้า และอิเล็กทรอนิกส์</p>
-                <span class="read-more">เข้าสู่บทเรียน <i class="fas fa-chevron-right"></i></span>
+            <div class="unit-accordion-item">
+                <div class="unit-accordion-header" onclick="toggleUnit('unit5')">
+                    <h4><i class="fas fa-bolt header-icon"></i> บทที่ 5: กลไก ไฟฟ้า และอิเล็กทรอนิกส์</h4>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div id="unit5" class="unit-accordion-content">
+                    <div class="unit-accordion-content-inner">
+                        <!-- Content from unit5.html -->
+                        <div class="unit-header">
+                            <h2>บทที่ 5: กลไก ไฟฟ้า และอิเล็กทรอนิกส์</h2>
+                            <p>พื้นฐานการเคลื่อนที่และวงจรไฟฟ้าที่ควรรู้</p>
+                        </div>
+                        <div class="video-container" style="text-align: center; margin-bottom: 2rem;">
+                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/C9Ueyi2GWSY"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                                style="max-width: 800px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"></iframe>
+                        </div>
+                        <div class="content-block">
+                            <h3>5.1 กลไก (Mechanism)</h3>
+                            <p>กลไกคือส่วนที่ช่วยผ่อนแรงหรือเปลี่ยนลักษณะการเคลื่อนที่:</p>
+                            <div class="example-box">
+                                <ul>
+                                    <li><strong>ล้อและเพลา:</strong> ช่วยในการเคลื่อนย้ายวัตถุ (เช่น รถยนต์)</li>
+                                    <li><strong>เฟือง (Gears):</strong> ใช้ส่งกำลังและเปลี่ยนความเร็ว/ทิศทาง (เช่น
+                                        ในนาฬิกา, รถจักรยาน)
+                                    </li>
+                                    <li><strong>คาน (Lever):</strong> ช่วยงัดวัตถุหรือผ่อนแรง</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content-block">
+                            <h3>5.2 ไฟฟ้าและอิเล็กทรอนิกส์</h3>
+                            <p>วงจรไฟฟ้าเบื้องต้นประกอบด้วย แหล่งกำเนิดไฟฟ้า ตัวนำไฟฟ้า และโหลด (อุปกรณ์ไฟฟ้า)</p>
+                            <ul>
+                                <li><strong>สวิตช์:</strong> ตัด/ต่อ วงจร</li>
+                                <li><strong>มอเตอร์:</strong> เปลี่ยนพลังงานไฟฟ้าเป็นพลังงานกล (ทำให้หมุน)</li>
+                                <li><strong>LED:</strong> ไดโอดเปล่งแสง เปลี่ยนพลังงานไฟฟ้าเป็นแสงสว่าง</li>
+                                <li><strong>บัซเซอร์:</strong> สร้างเสียงเตือน</li>
+                            </ul>
+                        </div>
+                        <div class="content-block">
+                            <h3>สื่อการเรียนรู้</h3>
+                            <div class="media-container" style="text-align: center; margin: 2rem 0;">
+                                <img src="5.png" alt="ภาพประกอบบทที่ 5"
+                                    style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                            </div>
+                            <div class="worksheet-download" style="text-align: center; margin-top: 2rem;">
+                                <a href="ใบงานที่ 5.pdf" target="_blank" class="btn-primary"><i
+                                        class="fas fa-file-pdf"></i>
+                                    ดาวน์โหลดใบงานที่ 5</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <!-- Unit 6 -->
-            <div class="unit-card" onclick="location.href='content/unit6.html'">
-                <div class="card-icon"><i class="fas fa-pencil-ruler"></i></div>
-                <h4>บทที่ 6</h4>
-                <p>กระบวนการออกแบบ</p>
-                <span class="read-more">เข้าสู่บทเรียน <i class="fas fa-chevron-right"></i></span>
+            <div class="unit-accordion-item">
+                <div class="unit-accordion-header" onclick="toggleUnit('unit6')">
+                    <h4><i class="fas fa-pencil-ruler header-icon"></i> บทที่ 6: กระบวนการออกแบบเชิงวิศวกรรม</h4>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div id="unit6" class="unit-accordion-content">
+                    <div class="unit-accordion-content-inner">
+                        <!-- Content from unit6.html -->
+                        <div class="unit-header">
+                            <h2>บทที่ 6: กระบวนการออกแบบเชิงวิศวกรรม</h2>
+                            <p>Engineering Design Process: หัวใจของการสร้างนวัตกรรม</p>
+                        </div>
+                        <div class="video-container" style="text-align: center; margin-bottom: 2rem;">
+                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/71ZEq1Lx2eY"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                                style="max-width: 800px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"></iframe>
+                        </div>
+                        <div class="content-block">
+                            <h3>6 ขั้นตอนของกระบวนการออกแบบ</h3>
+                            <p>กระบวนการทำงานเพื่อแก้ปัญหาหรือพัฒนางานอย่างเป็นขั้นตอน:</p>
+                            <div class="example-box">
+                                <ol>
+                                    <li><strong>ระบุปัญหา (Problem Identification):</strong> ทำความเข้าใจปัญหาให้ชัดเจน
+                                        ว่าคืออะไร
+                                        เกิดกับใคร</li>
+                                    <li><strong>รวบรวมข้อมูล (Related Information Search):</strong>
+                                        หาวิธีการแก้ปัญหาที่มีอยู่แล้ว
+                                        หรือความรู้ที่เกี่ยวข้อง</li>
+                                    <li><strong>ออกแบบวิธีการแก้ปัญหา (Solution Design):</strong>
+                                        ถ่ายทอดความคิดเป็นภาพร่าง หรือแผนผัง
+                                    </li>
+                                    <li><strong>วางแผนและดำเนินการ (Planning and Development):</strong>
+                                        ลงมือสร้างชิ้นงานตามที่ออกแบบไว้
+                                    </li>
+                                    <li><strong>ทดสอบและปรับปรุง (Testing and Evaluation):</strong>
+                                        ทดลองใช้และแก้ไขข้อบกพร่อง</li>
+                                    <li><strong>นำเสนอ (Presentation):</strong> สื่อสารให้ผู้อื่นเข้าใจในผลงาน</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="content-block">
+                            <h3>สื่อการเรียนรู้</h3>
+                            <div class="media-container" style="text-align: center; margin: 2rem 0;">
+                                <img src="6.png" alt="ภาพประกอบบทที่ 6"
+                                    style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                            </div>
+                            <div class="worksheet-download" style="text-align: center; margin-top: 2rem;">
+                                <a href="ใบงานที่ 6.pdf" target="_blank" class="btn-primary"><i
+                                        class="fas fa-file-pdf"></i>
+                                    ดาวน์โหลดใบงานที่ 6</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <!-- Unit 7 -->
-            <div class="unit-card" onclick="location.href='content/unit7.html'">
-                <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
-                <h4>บทที่ 7</h4>
-                <p>กรณีศึกษา</p>
-                <span class="read-more">เข้าสู่บทเรียน <i class="fas fa-chevron-right"></i></span>
+            <div class="unit-accordion-item">
+                <div class="unit-accordion-header" onclick="toggleUnit('unit7')">
+                    <h4><i class="fas fa-lightbulb header-icon"></i> บทที่ 7: กรณีศึกษา</h4>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div id="unit7" class="unit-accordion-content">
+                    <div class="unit-accordion-content-inner">
+                        <!-- Content from unit7.html -->
+                        <div class="unit-header">
+                            <h2>บทที่ 7: กรณีศึกษา</h2>
+                            <p>ตัวอย่างการนำกระบวนการออกแบบเชิงวิศวกรรมไปใช้จริง</p>
+                        </div>
+                        <div class="video-container" style="text-align: center; margin-bottom: 2rem;">
+                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/d4EPwFbNo7A"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                                style="max-width: 800px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"></iframe>
+                        </div>
+                        <div class="content-block">
+                            <h3>กรณีศึกษา: การแก้ปัญหาขยะในโรงเรียน</h3>
+                            <div class="example-box">
+                                <h4>ขั้นตอนการทำงาน</h4>
+                                <ol>
+                                    <li><strong>ระบุปัญหา:</strong> ถังขยะล้นและส่งกลิ่นเหม็นในโรงอาหาร</li>
+                                    <li><strong>รวบรวมข้อมูล:</strong> สำรวจปริมาณขยะ ประเภทขยะ และพฤติกรรมของนักเรียน
+                                    </li>
+                                    <li><strong>ออกแบบ:</strong> ออกแบบ "เครื่องบีบอัดขยะขวดพลาสติก" เพื่อลดพื้นที่</li>
+                                    <li><strong>ดำเนินการ:</strong> สร้างเครื่องต้นแบบจากไม้และกลไกคานงัด</li>
+                                    <li><strong>ทดสอบ:</strong> ลองนำไปวางให้เพื่อนใช้งาน พบว่าก้านโยกแข็งเกินไป
+                                        จึงปรับจุดหมุนใหม่</li>
+                                    <li><strong>นำเสนอ:</strong> จัดทำโปสเตอร์วิธีการใช้งานและวางข้างถังขยะ</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="content-block">
+                            <h3>บทสรุป</h3>
+                            <p>การเรียนรู้วิชาการออกแบบและเทคโนโลยี ช่วยให้เราคิดอย่างเป็นระบบ สร้างสรรค์ผลงาน
+                                และแก้ปัญหาในชีวิตจริงได้อย่างมีประสิทธิภาพ</p>
+                        </div>
+                        <div class="content-block">
+                            <h3>สื่อการเรียนรู้</h3>
+                            <div class="media-container" style="text-align: center; margin: 2rem 0;">
+                                <img src="7.png" alt="ภาพประกอบบทที่ 7"
+                                    style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
