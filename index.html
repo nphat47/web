@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="th">
 
 <head>
@@ -10,6 +10,8 @@
         href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Prompt:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<link rel="stylesheet" href="ai_style.css">
 </head>
 
 <body>
@@ -38,7 +40,7 @@
         <div class="hero-content">
             <h2>ยินดีต้อนรับสู่โลกของ<br><span>การออกแบบและเทคโนโลยี</span></h2>
             <p>เรียนรู้การออกแบบและเทคโนโลยี สำหรับนักเรียนชั้นมัธยมศึกษาปีที่ 1</p>
-            <a href="units.html" class="btn-primary">ไปที่บทเรียน <i class="fas fa-arrow-right"></i></a>
+            <a href="units.html" class="btn-primary">เข้าสู่บทเรียน <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="hero-image">
             <img src="ปกหน้าแรก.jpg" alt="ห้องเรียนคอมพิวเตอร์และหุ่นยนต์ (Cover Image)">
@@ -50,6 +52,45 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- AI Assistant 3D Robot -->
+    <div class="ai-mascot-container" id="aiMascot">
+        <div class="ai-tooltip" id="aiTooltip">สวัสดี!<br>คลิกเพื่อดูเมนู</div>
+        <div class="ai-mascot-3d">
+            <div class="mascot-antenna"><div class="mascot-antenna-bulb"></div></div>
+            <div class="mascot-head">
+                <div class="mascot-face">
+                    <div class="mascot-eye left"></div>
+                    <div class="mascot-eye right"></div>
+                    <div class="mascot-smile"></div>
+                </div>
+                <div class="mascot-ear left"></div>
+                <div class="mascot-ear right"></div>
+            </div>
+            <div class="mascot-body">
+                <div class="mascot-screen">
+                    <div class="mascot-heart"><i class="fas fa-heart"></i></div>
+                </div>
+            </div>
+            <div class="mascot-arm left"></div>
+            <div class="mascot-arm right"></div>
+            <div class="mascot-base"></div>
+            <div class="mascot-shadow"></div>
+        </div>
+        
+        <div class="ai-menu" id="aiMenu">
+            <ul>
+                <li><a href="index.html" style="color: #333;"><i class="fas fa-home"></i> หน้าแรก</a></li>
+                <li><a href="about.html" style="color: #333;"><i class="fas fa-info-circle"></i> เกี่ยวกับ</a></li>
+                <li><a href="units.html" style="color: #333;"><i class="fas fa-book"></i> บทเรียน</a></li>
+                <li><a href="quiz.html" style="color: #333;"><i class="fas fa-pencil-alt"></i> แบบทดสอบ</a></li>
+                <li><a href="sources.html" style="color: #333;"><i class="fas fa-link"></i> แหล่งที่มา</a></li>
+                <li id="aiCloseMenu" style="color: #ff6b6b;"><i class="fas fa-times"></i> ปิด</li>
+            </ul>
+        </div>
+    </div>
+
+<script src="ai_script.js"></script>
 </body>
 
 </html>
